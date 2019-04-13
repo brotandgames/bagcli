@@ -1,0 +1,4 @@
+BAGCLI_K8S_NAMESPACE=project-test
+BAGCLI_PROJECTS_PATH=/opt/myproject/projects
+BAGCLI_PROJECT_NAME=project-001
+BAGCLI_REPO_PATH=/path/to/repo

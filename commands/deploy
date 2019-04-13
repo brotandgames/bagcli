@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+. "$BAGCLI_WORKDIR/common"
+
+cli_help_deploy() {
+  echo "
+Command: deploy
+
+Usage: 
+  deploy project_name"
+  exit 1
+}
+
+[ ! -n "$1" ] && cli_help_deploy
+
+export BAGCLI_PROJECT_NAME=$1
+
+cli_log "Deployment BEGIN"
+
+cli_log "ENV variables"
+env | grep "BAGCLI_*"
+
+cli_log "Executing helm upgrade --install ..."
+# Example
+# helm upgrade --install \
+#   --wait \
+#   --values $BAGCLI_PROJECTS_PATH/$BAGCLI_PROJECT_NAME/values.yaml \
+#   --namespace $BAGCLI_K8S_NAMESPACE $BAGCLI_PROJECT_NAME $BAGCLI_REPO_PATH
+
+cli_log "Deployment END"
