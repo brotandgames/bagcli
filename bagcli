@@ -31,7 +31,7 @@ export $(cat "$BAGCLI_WORKDIR/config" | xargs)
 
 case "$1" in
   deploy|d)
-    "$BAGCLI_WORKDIR/commands/deploy" "$2" | tee -ia "$BAGCLI_WORKDIR/deploy_${2}.log"
+    "$BAGCLI_WORKDIR/commands/deploy" "$2" | tee -ia "$BAGCLI_WORKDIR/logs/deploy_${2}.log"
     ;;
   *)
     cli_help

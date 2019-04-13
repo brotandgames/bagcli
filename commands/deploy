@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 . "$BAGCLI_WORKDIR/common"
 
 cli_help_deploy() {
